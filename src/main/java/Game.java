@@ -4,8 +4,8 @@ import java.util.LinkedList;
 public class Game {
     ArrayList players = new ArrayList();
     int[] places = new int[6];
-    int[] purses  = new int[6];
-    boolean[] inPenaltyBox  = new boolean[6];
+    int[] purses = new int[6];
+    boolean[] inPenaltyBox = new boolean[6];
 
     LinkedList popQuestions = new LinkedList();
     LinkedList scienceQuestions = new LinkedList();
@@ -15,7 +15,7 @@ public class Game {
     int currentPlayer = 0;
     boolean isGettingOutOfPenaltyBox;
 
-    public  Game(){
+    public Game() {
         for (int i = 0; i < 50; i++) {
             popQuestions.addLast("Pop Question " + i);
             scienceQuestions.addLast(("Science Question " + i));
@@ -24,7 +24,7 @@ public class Game {
         }
     }
 
-    public String createRockQuestion(int index){
+    public String createRockQuestion(int index) {
         return "Rock Question " + index;
     }
 
@@ -35,7 +35,7 @@ public class Game {
         inPenaltyBox[howManyPlayers()] = false;
 
         print(name + " was added");
-        print("They are player number " + players.size());
+        print("They are player number " + howManyPlayers());
         return true;
     }
 
@@ -47,21 +47,26 @@ public class Game {
         print(players.get(currentPlayer) + " is the current player");
         print("They have rolled a " + roll);
 
-        if (inPenaltyBox[currentPlayer]) {
-            if (roll % 2 != 0) {
-                isGettingOutOfPenaltyBox = true;
-
-                print(players.get(currentPlayer) + " is getting out of the penalty box");
-
-                changeLocation(roll);
-            } else {
-                print(players.get(currentPlayer) + " is not getting out of the penalty box");
-                isGettingOutOfPenaltyBox = false;
-            }
-
-        } else {
+        if (!inPenaltyBox[currentPlayer]) {
             changeLocation(roll);
+
+            return;
         }
+
+        if (isOdd(roll)) {
+            isGettingOutOfPenaltyBox = true;
+
+            print(players.get(currentPlayer) + " is getting out of the penalty box");
+
+            changeLocation(roll);
+        } else {
+            print(players.get(currentPlayer) + " is not getting out of the penalty box");
+            isGettingOutOfPenaltyBox = false;
+        }
+    }
+
+    private boolean isOdd(int roll) {
+        return roll % 2 != 0;
     }
 
     private void changeLocation(int roll) {
@@ -109,7 +114,7 @@ public class Game {
     }
 
     private boolean wasCorrectlyAnswered() {
-        if (inPenaltyBox[currentPlayer]){
+        if (inPenaltyBox[currentPlayer]) {
             if (isGettingOutOfPenaltyBox) {
                 print("Answer was correct!!!!");
                 purses[currentPlayer]++;
@@ -130,7 +135,6 @@ public class Game {
             }
 
 
-
         } else {
 
             print("Answer was corrent!!!!");
@@ -148,9 +152,9 @@ public class Game {
         }
     }
 
-    private boolean wrongAnswer(){
+    private boolean wrongAnswer() {
         print("Question was incorrectly answered");
-        print(players.get(currentPlayer)+ " was sent to the penalty box");
+        print(players.get(currentPlayer) + " was sent to the penalty box");
         inPenaltyBox[currentPlayer] = true;
 
         currentPlayer++;
@@ -162,7 +166,7 @@ public class Game {
         return !(purses[currentPlayer] == 6);
     }
 
-    private void print(Object value){
+    private void print(Object value) {
         System.out.println(value);
     }
 }
