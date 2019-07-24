@@ -52,31 +52,29 @@ public class Game {
                 isGettingOutOfPenaltyBox = true;
 
                 print(players.get(currentPlayer) + " is getting out of the penalty box");
-                places[currentPlayer] = places[currentPlayer] + roll;
-                if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
 
-                print(players.get(currentPlayer)
-                        + "'s new location is "
-                        + places[currentPlayer]);
-                print("The category is " + currentCategory());
-                askQuestion();
+                changeLocation(roll);
             } else {
                 print(players.get(currentPlayer) + " is not getting out of the penalty box");
                 isGettingOutOfPenaltyBox = false;
             }
 
         } else {
-
-            places[currentPlayer] = places[currentPlayer] + roll;
-            if (places[currentPlayer] > 11) places[currentPlayer] = places[currentPlayer] - 12;
-
-            print(players.get(currentPlayer)
-                    + "'s new location is "
-                    + places[currentPlayer]);
-            print("The category is " + currentCategory());
-            askQuestion();
+            changeLocation(roll);
         }
+    }
 
+    private void changeLocation(int roll) {
+        places[currentPlayer] += roll;
+
+        if (places[currentPlayer] > 11)
+            places[currentPlayer] -= 12;
+
+        print(players.get(currentPlayer)
+                + "'s new location is "
+                + places[currentPlayer]);
+        print("The category is " + currentCategory());
+        askQuestion();
     }
 
     public boolean decideAnswer(int nextValue) {
