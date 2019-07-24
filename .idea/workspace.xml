@@ -2,7 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b23b926-765a-4ea9-98e0-7e9b6fef89f1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Questions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Location.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Players.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/GameRunnerShould.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/GameRunnerShould.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-GameRunnerShould.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-GameRunnerShould.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -42,24 +60,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="307">
-              <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+            <state>
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#424#425#0" expanded="true" />
-                <element signature="method#roll#0;class#Game#0" />
-                <element signature="e#1493#1560#1" />
-                <element signature="e#1525#1719#1" />
-                <element signature="method#addPlayer#0;class#Game#0" />
-                <element signature="e#1262#1263#0" expanded="true" />
-                <element signature="e#1299#1300#0" expanded="true" />
-                <element signature="e#1492#1493#0" expanded="true" />
-                <element signature="method#currentCategory#0;class#Game#0" />
-                <element signature="e#3521#3522#0" expanded="true" />
-                <element signature="e#3565#3566#0" expanded="true" />
-                <element signature="e#4706#4707#0" expanded="true" />
-                <element signature="e#4755#4756#0" expanded="true" />
-                <element signature="e#3747#3748#0" expanded="true" />
+                <element signature="e#1375#1376#0" expanded="true" />
+                <element signature="e#1411#1412#0" expanded="true" />
+                <element signature="e#2114#2115#0" expanded="true" />
+                <element signature="e#2193#2194#0" expanded="true" />
+                <element signature="e#2385#2386#0" expanded="true" />
+                <element signature="e#2437#2438#0" expanded="true" />
+                <element signature="e#3525#3526#0" expanded="true" />
+                <element signature="e#3582#3583#0" expanded="true" />
+                <element signature="e#3576#3577#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,10 +90,14 @@
     <findStrings>
       <find>System.out.println</find>
       <find>print</find>
+      <find>currentPlayer =</find>
+      <find>currentPlayer++</find>
+      <find>currentPlayer</find>
     </findStrings>
     <replaceStrings>
       <replace>print</replace>
       <replace>System.out.println</replace>
+      <replace>players.currentPlayer</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -94,6 +110,8 @@
         <option value="$PROJECT_DIR$/src/test/java/GameRunnerShould.java" />
         <option value="$PROJECT_DIR$/src/main/java/GameRunner.java" />
         <option value="$PROJECT_DIR$/src/main/java/Questions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Location.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Players.java" />
         <option value="$PROJECT_DIR$/src/main/java/Game.java" />
       </list>
     </option>
@@ -249,39 +267,39 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 14m 51s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 15m 12s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 15m 17s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 17m 25s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 17m 36s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 17m 42s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 18m 35s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 21m 35s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 23m 51s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 33m 45s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 37m 43s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 46m 07s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 46m 26s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 46m 43s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 47m 01s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 47m 34s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 48m 16s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 49m 29s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 15h 49m 40s.xml">
       <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7639000" />
+    <option name="totallyTimeSpent" value="8622000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -438,26 +456,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Location.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Players.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="24" lean-forward="true" selection-start-line="24" selection-end-line="24" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="15" column="19" lean-forward="true" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+        <state>
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="method#roll#0;class#Game#0" />
-            <element signature="e#1493#1560#1" />
-            <element signature="e#1525#1719#1" />
-            <element signature="method#addPlayer#0;class#Game#0" />
-            <element signature="e#1262#1263#0" expanded="true" />
-            <element signature="e#1299#1300#0" expanded="true" />
-            <element signature="e#1492#1493#0" expanded="true" />
-            <element signature="method#currentCategory#0;class#Game#0" />
-            <element signature="e#3521#3522#0" expanded="true" />
-            <element signature="e#3565#3566#0" expanded="true" />
-            <element signature="e#4706#4707#0" expanded="true" />
-            <element signature="e#4755#4756#0" expanded="true" />
-            <element signature="e#3747#3748#0" expanded="true" />
+            <element signature="e#1375#1376#0" expanded="true" />
+            <element signature="e#1411#1412#0" expanded="true" />
+            <element signature="e#2114#2115#0" expanded="true" />
+            <element signature="e#2193#2194#0" expanded="true" />
+            <element signature="e#2385#2386#0" expanded="true" />
+            <element signature="e#2437#2438#0" expanded="true" />
+            <element signature="e#3525#3526#0" expanded="true" />
+            <element signature="e#3582#3583#0" expanded="true" />
+            <element signature="e#3576#3577#0" expanded="true" />
           </folding>
         </state>
       </provider>
