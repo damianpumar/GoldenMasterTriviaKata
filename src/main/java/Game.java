@@ -21,28 +21,6 @@ public class Game {
         }
     }
 
-    private void addQuestions(int questionNumber) {
-        popQuestions.addLast("Pop Question " + questionNumber);
-        scienceQuestions.addLast(("Science Question " + questionNumber));
-        sportsQuestions.addLast(("Sports Question " + questionNumber));
-        rockQuestions.addLast("Rock Question "+ questionNumber);
-    }
-
-    public boolean addPlayer(String name) {
-        players.add(name);
-        places[howManyPlayers()] = 0;
-        purses[howManyPlayers()] = 0;
-        inPenaltyBox[howManyPlayers()] = false;
-
-        print(name + " was added");
-        print("They are player number " + howManyPlayers());
-        return true;
-    }
-
-    private int howManyPlayers() {
-        return players.size();
-    }
-
     public void roll(int roll) {
         print(players.get(currentPlayer) + " is the current player");
         print("They have rolled a " + roll);
@@ -63,6 +41,27 @@ public class Game {
             print(players.get(currentPlayer) + " is not getting out of the penalty box");
             isGettingOutOfPenaltyBox = false;
         }
+    }
+
+    public void addPlayer(String name) {
+        players.add(name);
+        places[howManyPlayers()] = 0;
+        purses[howManyPlayers()] = 0;
+        inPenaltyBox[howManyPlayers()] = false;
+
+        print(name + " was added");
+        print("They are player number " + howManyPlayers());
+    }
+
+    private void addQuestions(int questionNumber) {
+        popQuestions.addLast("Pop Question " + questionNumber);
+        scienceQuestions.addLast(("Science Question " + questionNumber));
+        sportsQuestions.addLast(("Sports Question " + questionNumber));
+        rockQuestions.addLast("Rock Question "+ questionNumber);
+    }
+
+    private int howManyPlayers() {
+        return players.size();
     }
 
     private boolean isOdd(int roll) {
@@ -120,8 +119,7 @@ public class Game {
 
                 return decideIsWinner();
             } else {
-                currentPlayer++;
-                if (currentPlayer == players.size()) currentPlayer = 0;
+                resetCurrentPlayer();
                 return true;
             }
         } else {
@@ -140,10 +138,15 @@ public class Game {
                 + " Gold Coins.");
 
         boolean winner = didPlayerWin();
-        currentPlayer++;
-        if (currentPlayer == players.size()) currentPlayer = 0;
+
+        resetCurrentPlayer();
 
         return winner;
+    }
+
+    private void resetCurrentPlayer() {
+        currentPlayer++;
+        if (currentPlayer == howManyPlayers()) currentPlayer = 0;
     }
 
     private boolean wrongAnswer() {
@@ -151,8 +154,8 @@ public class Game {
         print(players.get(currentPlayer) + " was sent to the penalty box");
         inPenaltyBox[currentPlayer] = true;
 
-        currentPlayer++;
-        if (currentPlayer == players.size()) currentPlayer = 0;
+        resetCurrentPlayer();
+
         return true;
     }
 
