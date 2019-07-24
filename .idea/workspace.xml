@@ -41,26 +41,26 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+            <state relative-caret-position="441">
+              <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#906#907#0" expanded="true" />
                 <element signature="e#1262#1263#0" expanded="true" />
                 <element signature="e#1299#1300#0" expanded="true" />
                 <element signature="method#roll#0;class#Game#0" />
                 <element signature="e#1927#1964#1" />
-                <element signature="e#1998#1999#0" expanded="true" />
+                <element signature="e#2172#2173#0" expanded="true" />
                 <element signature="method#changeLocation#0;class#Game#0" />
                 <element signature="method#decideAnswer#0;class#Game#0" />
                 <element signature="method#askQuestion#0;class#Game#0" />
                 <element signature="method#currentCategory#0;class#Game#0" />
+                <element signature="method#wasCorrectlyAnswered#0;class#Game#0" />
                 <element signature="method#decideAnswerCorrectly#0;class#Game#0" />
                 <element signature="method#wrongAnswer#0;class#Game#0" />
                 <element signature="e#5046#5099#1" />
-                <element signature="e#4817#4818#0" expanded="true" />
+                <element signature="e#4991#4992#0" expanded="true" />
                 <element signature="n#!!block;n#print#0;n#Game#0" />
-                <element signature="e#4898#4899#0" expanded="true" />
+                <element signature="e#5072#5073#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,6 +76,9 @@
     </option>
   </component>
   <component name="FindInProjectRecents">
+    <findStrings>
+      <find>System.out.println</find>
+    </findStrings>
     <replaceStrings>
       <replace>print</replace>
     </replaceStrings>
@@ -276,7 +279,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6066000" />
+    <option name="totallyTimeSpent" value="6173000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -428,26 +431,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+        <state relative-caret-position="441">
+          <caret line="28" column="5" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
             <element signature="e#1262#1263#0" expanded="true" />
             <element signature="e#1299#1300#0" expanded="true" />
             <element signature="method#roll#0;class#Game#0" />
             <element signature="e#1927#1964#1" />
-            <element signature="e#1998#1999#0" expanded="true" />
+            <element signature="e#2172#2173#0" expanded="true" />
             <element signature="method#changeLocation#0;class#Game#0" />
             <element signature="method#decideAnswer#0;class#Game#0" />
             <element signature="method#askQuestion#0;class#Game#0" />
             <element signature="method#currentCategory#0;class#Game#0" />
+            <element signature="method#wasCorrectlyAnswered#0;class#Game#0" />
             <element signature="method#decideAnswerCorrectly#0;class#Game#0" />
             <element signature="method#wrongAnswer#0;class#Game#0" />
             <element signature="e#5046#5099#1" />
-            <element signature="e#4817#4818#0" expanded="true" />
+            <element signature="e#4991#4992#0" expanded="true" />
             <element signature="n#!!block;n#print#0;n#Game#0" />
-            <element signature="e#4898#4899#0" expanded="true" />
+            <element signature="e#5072#5073#0" expanded="true" />
           </folding>
         </state>
       </provider>
