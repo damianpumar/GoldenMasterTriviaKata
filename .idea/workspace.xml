@@ -41,13 +41,14 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="724">
-              <caret line="160" column="5" lean-forward="true" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
+            <state relative-caret-position="733">
+              <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#860#861#0" expanded="true" />
                 <element signature="e#907#908#0" expanded="true" />
-                <element signature="method#add#0;class#Game#0" />
+                <element signature="e#1382#1383#0" expanded="true" />
+                <element signature="e#1419#1420#0" expanded="true" />
                 <element signature="method#roll#0;class#Game#0" />
                 <element signature="method#decideAnswer#0;class#Game#0" />
                 <element signature="method#askQuestion#0;class#Game#0" />
@@ -263,7 +264,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5220000" />
+    <option name="totallyTimeSpent" value="5281000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -283,9 +284,9 @@
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.5015748" side_tool="true" weight="0.13860206" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32992125" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.41889763" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.18346457" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.18346457" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32992125" />
@@ -415,13 +416,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="160" column="5" lean-forward="true" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
+        <state relative-caret-position="733">
+          <caret line="42" column="30" lean-forward="true" selection-start-line="42" selection-start-column="30" selection-end-line="42" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#860#861#0" expanded="true" />
             <element signature="e#907#908#0" expanded="true" />
-            <element signature="method#add#0;class#Game#0" />
+            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#1419#1420#0" expanded="true" />
             <element signature="method#roll#0;class#Game#0" />
             <element signature="method#decideAnswer#0;class#Game#0" />
             <element signature="method#askQuestion#0;class#Game#0" />
