@@ -3,17 +3,17 @@ import java.util.Arrays;
 public class Game {
     private final Questions questions;
     private final Players players;
+    private final Answers answers;
 
-    int[] places = new int[6];
-    int[] purses = new int[6];
-    boolean[] inPenaltyBox = new boolean[6];
-
-
-    boolean isGettingOutOfPenaltyBox;
+    private int[] places = new int[6];
+    private int[] purses = new int[6];
+    private boolean[] inPenaltyBox = new boolean[6];
+    private boolean isGettingOutOfPenaltyBox;
 
     public Game() {
         this.questions = new Questions();
         this.players = new Players();
+        this.answers = new Answers(this.players,purses, inPenaltyBox);
     }
 
     public void roll(int roll) {
@@ -43,6 +43,10 @@ public class Game {
         purses[this.players.howManyPlayers()] = 0;
         inPenaltyBox[this.players.howManyPlayers()] = false;
         this.players.addPlayer(name);
+    }
+
+    public boolean decideAnswer(int nextValue) {
+        return this.answers.answer(nextValue, isGettingOutOfPenaltyBox);
     }
 
     private boolean isOdd(int roll) {
@@ -77,63 +81,8 @@ public class Game {
         return Arrays.stream(places).anyMatch(p -> currentPlace() == p);
     }
 
-    public boolean decideAnswer(int nextValue) {
-        if (nextValue == 7)
-            return wrongAnswer();
-
-        return wasCorrectlyAnswered();
-    }
-
     private int currentPlace() {
         return places[players.currentPlayer];
-    }
-
-    private boolean wasCorrectlyAnswered() {
-        if (!inPenaltyBox[players.currentPlayer]) {
-            print("Answer was corrent!!!!");
-
-            return decideIsWinner();
-        }
-
-        if (isGettingOutOfPenaltyBox) {
-            print("Answer was correct!!!!");
-
-            return decideIsWinner();
-        }
-
-        this.players.changePlayer();
-
-        return true;
-    }
-
-    private boolean decideIsWinner() {
-        purses[players.currentPlayer]++;
-        print(players.getCurrentPlayer()
-                + " now has "
-                + purses[players.currentPlayer]
-                + " Gold Coins.");
-
-        boolean winner = didPlayerWin();
-
-        this.players.changePlayer();
-
-        return winner;
-    }
-
-
-
-    private boolean wrongAnswer() {
-        print("Question was incorrectly answered");
-        print(this.players.getCurrentPlayer() + " was sent to the penalty box");
-        inPenaltyBox[players.currentPlayer] = true;
-
-        this.players.changePlayer();
-
-        return true;
-    }
-
-    private boolean didPlayerWin() {
-        return purses[players.currentPlayer] != 6;
     }
 
     private void print(Object value) {
