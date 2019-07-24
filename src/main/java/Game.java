@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Game {
@@ -57,7 +58,7 @@ public class Game {
         popQuestions.addLast("Pop Question " + questionNumber);
         scienceQuestions.addLast(("Science Question " + questionNumber));
         sportsQuestions.addLast(("Sports Question " + questionNumber));
-        rockQuestions.addLast("Rock Question "+ questionNumber);
+        rockQuestions.addLast("Rock Question " + questionNumber);
     }
 
     private int howManyPlayers() {
@@ -71,12 +72,12 @@ public class Game {
     private void changeLocation(int roll) {
         places[currentPlayer] += roll;
 
-        if (places[currentPlayer] > 11)
+        if (currentPlace() > 11)
             places[currentPlayer] -= 12;
 
         print(players.get(currentPlayer)
                 + "'s new location is "
-                + places[currentPlayer]);
+                + currentPlace());
         print("The category is " + currentCategory());
         askQuestion();
     }
@@ -100,34 +101,39 @@ public class Game {
     }
 
     private String currentCategory() {
-        if (places[currentPlayer] == 0) return "Pop";
-        if (places[currentPlayer] == 4) return "Pop";
-        if (places[currentPlayer] == 8) return "Pop";
-        if (places[currentPlayer] == 1) return "Science";
-        if (places[currentPlayer] == 5) return "Science";
-        if (places[currentPlayer] == 9) return "Science";
-        if (places[currentPlayer] == 2) return "Sports";
-        if (places[currentPlayer] == 6) return "Sports";
-        if (places[currentPlayer] == 10) return "Sports";
+        if (isCurrentPlace(0, 4,8)) return "Pop";
+
+        if (isCurrentPlace(1,5,9)) return "Science";
+
+        if (isCurrentPlace(2, 6,10)) return "Sports";
+
         return "Rock";
     }
 
+    private boolean isCurrentPlace(int... places) {
+        return Arrays.stream(places).anyMatch(p->currentPlace() == p);
+    }
+
+    private int currentPlace() {
+        return places[currentPlayer];
+    }
+
     private boolean wasCorrectlyAnswered() {
-        if (inPenaltyBox[currentPlayer]) {
-            if (isGettingOutOfPenaltyBox) {
-                print("Answer was correct!!!!");
-
-                return decideIsWinner();
-            } else {
-                resetCurrentPlayer();
-                return true;
-            }
-        } else {
-
+        if (!inPenaltyBox[currentPlayer]) {
             print("Answer was corrent!!!!");
 
             return decideIsWinner();
         }
+
+        if (isGettingOutOfPenaltyBox) {
+            print("Answer was correct!!!!");
+
+            return decideIsWinner();
+        }
+
+        resetCurrentPlayer();
+
+        return true;
     }
 
     private boolean decideIsWinner() {
@@ -160,7 +166,7 @@ public class Game {
     }
 
     private boolean didPlayerWin() {
-        return !(purses[currentPlayer] == 6);
+        return purses[currentPlayer] != 6;
     }
 
     private void print(Object value) {
