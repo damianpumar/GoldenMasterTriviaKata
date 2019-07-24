@@ -3,23 +3,18 @@ import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Game {
+    private final Questions questions;
+
     ArrayList players = new ArrayList();
     int[] places = new int[6];
     int[] purses = new int[6];
     boolean[] inPenaltyBox = new boolean[6];
 
-    LinkedList popQuestions = new LinkedList();
-    LinkedList scienceQuestions = new LinkedList();
-    LinkedList sportsQuestions = new LinkedList();
-    LinkedList rockQuestions = new LinkedList();
-
     int currentPlayer = 0;
     boolean isGettingOutOfPenaltyBox;
 
     public Game() {
-        for (int questionNumber = 0; questionNumber < 50; questionNumber++) {
-            addQuestions(questionNumber);
-        }
+        this.questions = new Questions();
     }
 
     public void roll(int roll) {
@@ -54,13 +49,6 @@ public class Game {
         print("They are player number " + howManyPlayers());
     }
 
-    private void addQuestions(int questionNumber) {
-        popQuestions.addLast("Pop Question " + questionNumber);
-        scienceQuestions.addLast(("Science Question " + questionNumber));
-        sportsQuestions.addLast(("Sports Question " + questionNumber));
-        rockQuestions.addLast("Rock Question " + questionNumber);
-    }
-
     private int howManyPlayers() {
         return players.size();
     }
@@ -79,25 +67,8 @@ public class Game {
                 + "'s new location is "
                 + currentPlace());
         print("The category is " + currentCategory());
-        askQuestion();
-    }
 
-    public boolean decideAnswer(int nextValue) {
-        if (nextValue == 7)
-            return wrongAnswer();
-
-        return wasCorrectlyAnswered();
-    }
-
-    private void askQuestion() {
-        if (currentCategory() == "Pop")
-            print(popQuestions.removeFirst());
-        if (currentCategory() == "Science")
-            print(scienceQuestions.removeFirst());
-        if (currentCategory() == "Sports")
-            print(sportsQuestions.removeFirst());
-        if (currentCategory() == "Rock")
-            print(rockQuestions.removeFirst());
+        questions.askQuestion(currentCategory());
     }
 
     private String currentCategory() {
@@ -112,6 +83,13 @@ public class Game {
 
     private boolean isCurrentPlace(int... places) {
         return Arrays.stream(places).anyMatch(p->currentPlace() == p);
+    }
+
+    public boolean decideAnswer(int nextValue) {
+        if (nextValue == 7)
+            return wrongAnswer();
+
+        return wasCorrectlyAnswered();
     }
 
     private int currentPlace() {
