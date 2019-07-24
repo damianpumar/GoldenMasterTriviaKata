@@ -17,7 +17,7 @@ public class Answers {
     }
 
     private boolean wasCorrectlyAnswered(boolean isGettingOutOfPenaltyBox) {
-        if (!inPenaltyBox[players.currentPlayer]) {
+        if (!players.isInPenaltyBox()) {
             System.out.println("Answer was corrent!!!!");
 
             return decideIsWinner();
@@ -39,7 +39,7 @@ public class Answers {
         System.out.println(this.players.getCurrentPlayer() + " was sent to the penalty box");
         inPenaltyBox[players.currentPlayer] = true;
 
-        this.players.changePlayer();
+        players.changePlayer();
 
         return true;
     }

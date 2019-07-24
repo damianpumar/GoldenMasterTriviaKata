@@ -11,12 +11,12 @@ public class Game {
         this.board = new Board(places, purses, inPenaltyBox);
     }
 
-    public void roll(int roll) {
-        board.roll(roll);
-    }
-
     public void addPlayer(String name) {
         board.addPlayer(name);
+    }
+
+    public void roll(int roll) {
+        board.roll(roll);
     }
 
     public boolean decideAnswer(int nextValue) {

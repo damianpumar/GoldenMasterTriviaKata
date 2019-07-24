@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="GameRunnerShould" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-07-24T14:30:53" hostname="Damians-MacBook-Pro.local" time="0.457">
+<testsuite name="GameRunnerShould" tests="1" skipped="0" failures="0" errors="0" timestamp="2019-07-24T15:03:41" hostname="Damians-MacBook-Pro.local" time="0.462">
   <properties/>
-  <testcase name="golden_master" classname="GameRunnerShould" time="0.457"/>
+  <testcase name="golden_master" classname="GameRunnerShould" time="0.462"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
