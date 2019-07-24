@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2b23b926-765a-4ea9-98e0-7e9b6fef89f1" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/GameRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameRunner.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -42,14 +41,18 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+            <state relative-caret-position="724">
+              <caret line="160" column="5" lean-forward="true" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#860#861#0" expanded="true" />
                 <element signature="e#907#908#0" expanded="true" />
-                <element signature="e#1382#1383#0" expanded="true" />
-                <element signature="e#1419#1420#0" expanded="true" />
+                <element signature="method#add#0;class#Game#0" />
+                <element signature="method#roll#0;class#Game#0" />
+                <element signature="method#decideAnswer#0;class#Game#0" />
+                <element signature="method#askQuestion#0;class#Game#0" />
+                <element signature="method#currentCategory#0;class#Game#0" />
+                <element signature="method#wasCorrectlyAnswered#0;class#Game#0" />
               </folding>
             </state>
           </provider>
@@ -228,9 +231,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 12h 46m 50s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 12h 46m 51s.xml">
       <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -258,9 +258,12 @@
     <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 14h 46m 48s.xml">
       <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 14h 47m 30s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5171000" />
+    <option name="totallyTimeSpent" value="5220000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -412,14 +415,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
+        <state relative-caret-position="724">
+          <caret line="160" column="5" lean-forward="true" selection-start-line="160" selection-start-column="5" selection-end-line="160" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#860#861#0" expanded="true" />
             <element signature="e#907#908#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
-            <element signature="e#1419#1420#0" expanded="true" />
+            <element signature="method#add#0;class#Game#0" />
+            <element signature="method#roll#0;class#Game#0" />
+            <element signature="method#decideAnswer#0;class#Game#0" />
+            <element signature="method#askQuestion#0;class#Game#0" />
+            <element signature="method#currentCategory#0;class#Game#0" />
+            <element signature="method#wasCorrectlyAnswered#0;class#Game#0" />
           </folding>
         </state>
       </provider>
