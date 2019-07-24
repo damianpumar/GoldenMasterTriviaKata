@@ -1,26 +1,27 @@
 import java.util.Random;
 
 public class GameRunner {
-    private final Game aGame;
+    private final Game game;
     private final Random rand;
 
     public GameRunner(Random rand) {
         this.rand = rand;
-        this.aGame = new Game();
+
+        this.game = new Game();
     }
 
     public void run() {
         boolean notAWinner;
 
-        aGame.addPlayer("Chet");
-        aGame.addPlayer("Pat");
-        aGame.addPlayer("Sue");
+        game.addPlayer("Chet");
+        game.addPlayer("Pat");
+        game.addPlayer("Sue");
 
         do {
 
-            aGame.roll(rand.nextInt(5) + 1);
+            game.roll(rand.nextInt(5) + 1);
 
-            notAWinner = aGame.decideAnswer(rand.nextInt(9));
+            notAWinner = game.decideAnswer(rand.nextInt(9));
 
         } while (notAWinner);
     }

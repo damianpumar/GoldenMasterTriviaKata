@@ -1,11 +1,10 @@
 import java.util.LinkedList;
 
 public class Questions {
-
-    LinkedList popQuestions = new LinkedList();
-    LinkedList scienceQuestions = new LinkedList();
-    LinkedList sportsQuestions = new LinkedList();
-    LinkedList rockQuestions = new LinkedList();
+    private final LinkedList popQuestions = new LinkedList();
+    private final LinkedList scienceQuestions = new LinkedList();
+    private final LinkedList sportsQuestions = new LinkedList();
+    private final LinkedList rockQuestions = new LinkedList();
 
     public Questions() {
         for (int questionNumber = 0; questionNumber < 50; questionNumber++) {

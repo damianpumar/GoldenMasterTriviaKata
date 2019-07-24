@@ -1,12 +1,8 @@
-public class Answers {
+public class Score {
     private final Players players;
-    private int[] purses;
-    private boolean[] inPenaltyBox;
-
-    public Answers(Players players, int[] purses, boolean[] inPenaltyBox) {
+    
+    public Score(Players players) {
         this.players = players;
-        this.purses = purses;
-        this.inPenaltyBox = inPenaltyBox;
     }
 
     public boolean answer(int nextValue, boolean isGettingOutOfPenaltyBox) {
@@ -36,8 +32,10 @@ public class Answers {
 
     private boolean wrongAnswer() {
         System.out.println("Question was incorrectly answered");
+
         System.out.println(this.players.getCurrentPlayer() + " was sent to the penalty box");
-        inPenaltyBox[players.currentPlayer] = true;
+
+        players.moveToPenaltyBox();
 
         players.changePlayer();
 
@@ -45,10 +43,11 @@ public class Answers {
     }
 
     private boolean decideIsWinner() {
-        purses[players.currentPlayer]++;
+        players.increasePurse();
+
         System.out.println(players.getCurrentPlayer()
                 + " now has "
-                + purses[players.currentPlayer]
+                + players.currentPurse()
                 + " Gold Coins.");
 
         boolean winner = didPlayerWin();
@@ -59,6 +58,6 @@ public class Answers {
     }
 
     private boolean didPlayerWin() {
-        return purses[players.currentPlayer] != 6;
+        return players.currentPurse() != 6;
     }
 }
