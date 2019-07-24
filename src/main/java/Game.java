@@ -85,6 +85,13 @@ public class Game {
 
     }
 
+    public boolean decideAnswer(int nextValue) {
+        if (nextValue == 7)
+            return wrongAnswer();
+
+        return wasCorrectlyAnswered();
+    }
+
     private void askQuestion() {
         if (currentCategory() == "Pop")
             System.out.println(popQuestions.removeFirst());

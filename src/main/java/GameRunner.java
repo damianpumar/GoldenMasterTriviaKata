@@ -1,7 +1,6 @@
 import java.util.Random;
 
 public class GameRunner {
-    private boolean notAWinner;
     private final Game aGame;
     private final Random rand;
 
@@ -11,6 +10,8 @@ public class GameRunner {
     }
 
     public void run() {
+        boolean notAWinner;
+
         aGame.add("Chet");
         aGame.add("Pat");
         aGame.add("Sue");
@@ -19,11 +20,7 @@ public class GameRunner {
 
             aGame.roll(rand.nextInt(5) + 1);
 
-            if (rand.nextInt(9) == 7) {
-                notAWinner = aGame.wrongAnswer();
-            } else {
-                notAWinner = aGame.wasCorrectlyAnswered();
-            }
+            notAWinner = aGame.decideAnswer(rand.nextInt(9));
 
         } while (notAWinner);
     }
