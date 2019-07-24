@@ -1,19 +1,29 @@
 import java.util.LinkedList;
 
 public class Questions {
+    private final Category category;
 
     LinkedList popQuestions = new LinkedList();
     LinkedList scienceQuestions = new LinkedList();
     LinkedList sportsQuestions = new LinkedList();
     LinkedList rockQuestions = new LinkedList();
+    private Players players;
+    private int[] places;
 
-    public Questions() {
+    public Questions(Players players, int[] places) {
+        this.players = players;
+        this.category = new Category();
+        this.places = places;
+
         for (int questionNumber = 0; questionNumber < 50; questionNumber++) {
             addQuestions(questionNumber);
         }
     }
 
-    public void askQuestion(String currentCategory) {
+    public void askQuestion() {
+
+        String currentCategory = category.printAndReturnCategory(places[players.currentPlayer]);
+
         if (currentCategory == "Pop")
             System.out.println(popQuestions.removeFirst());
         if (currentCategory == "Science")

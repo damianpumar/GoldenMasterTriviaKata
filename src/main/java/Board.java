@@ -1,27 +1,30 @@
-import java.util.Arrays;
-
 public class Board {
     private final Players players;
+    private final Answers answers;
+    private final Questions questions;
 
-    private Questions questions;
     private int[] places;
     private boolean[] inPenaltyBox;
+    private boolean isGettingOutOfPenaltyBox;
 
-    public Board(Players players, Questions questions, int[] places, boolean[] inPenaltyBox) {
-        this.players = players;
-        this.questions = questions;
+    private final int MAX_PLACES_PER_PLAYER = 11;
+
+    public Board(int[] places, int[] purses, boolean[] inPenaltyBox) {
+        this.players = new Players(places, purses, inPenaltyBox);
+        this.answers = new Answers(players, purses, inPenaltyBox);
+        this.questions = new Questions(players, places);
         this.places = places;
         this.inPenaltyBox = inPenaltyBox;
     }
 
-    public boolean roll(int roll) {
+    public void roll(int roll) {
         System.out.println(players.getCurrentPlayer() + " is the current player");
         System.out.println("They have rolled a " + roll);
 
         if (!inPenaltyBox[players.currentPlayer]) {
             changeLocation(roll);
 
-            return false;
+            return;
         }
 
         if (isOdd(roll)) {
@@ -29,44 +32,33 @@ public class Board {
 
             changeLocation(roll);
 
-            return true;
+            isGettingOutOfPenaltyBox = true;
+        } else {
+            System.out.println(players.getCurrentPlayer() + " is not getting out of the penalty box");
+
+            isGettingOutOfPenaltyBox = false;
         }
+    }
 
-        System.out.println(players.getCurrentPlayer() + " is not getting out of the penalty box");
+    public void addPlayer(String name) {
+        players.addPlayer(name);
+    }
 
-        return false;
+    public boolean answer(int nextValue) {
+        return answers.answer(nextValue, isGettingOutOfPenaltyBox);
     }
 
     private void changeLocation(int roll) {
         places[players.currentPlayer] += roll;
 
-        if (currentPlace() > 11)
+        if (places[players.currentPlayer] > MAX_PLACES_PER_PLAYER)
             places[players.currentPlayer] -= 12;
 
         System.out.println(this.players.getCurrentPlayer()
                 + "'s new location is "
-                + currentPlace());
-        System.out.println("The category is " + currentCategory());
+                + places[players.currentPlayer]);
 
-        questions.askQuestion(currentCategory());
-    }
-
-    private String currentCategory() {
-        if (isCurrentPlace(0, 4, 8)) return "Pop";
-
-        if (isCurrentPlace(1, 5, 9)) return "Science";
-
-        if (isCurrentPlace(2, 6, 10)) return "Sports";
-
-        return "Rock";
-    }
-
-    private boolean isCurrentPlace(int... places) {
-        return Arrays.stream(places).anyMatch(p -> currentPlace() == p);
-    }
-
-    private int currentPlace() {
-        return places[players.currentPlayer];
+        questions.askQuestion();
     }
 
     private boolean isOdd(int roll) {
