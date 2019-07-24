@@ -28,15 +28,13 @@ public class Game {
         return "Rock Question " + index;
     }
 
-    public boolean add(String playerName) {
-
-
-        players.add(playerName);
+    public boolean addPlayer(String name) {
+        players.add(name);
         places[howManyPlayers()] = 0;
         purses[howManyPlayers()] = 0;
         inPenaltyBox[howManyPlayers()] = false;
 
-        System.out.println(playerName + " was added");
+        System.out.println(name + " was added");
         System.out.println("They are player number " + players.size());
         return true;
     }

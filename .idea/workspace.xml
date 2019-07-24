@@ -42,8 +42,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="662">
-              <caret line="29" selection-start-line="29" selection-end-line="29" />
+            <state relative-caret-position="551">
+              <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#860#861#0" expanded="true" />
@@ -228,9 +228,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 12h 46m 47s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 12h 46m 50s.xml">
       <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -258,9 +255,12 @@
     <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 14h 46m 02s.xml">
       <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.24 at 14h 46m 48s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5129000" />
+    <option name="totallyTimeSpent" value="5171000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -275,14 +275,14 @@
     <frame x="1440" y="-238" width="2560" height="1362" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984252" visible="true" weight="0.13860206" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984252" visible="true" weight="0.13860206" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.5015748" side_tool="true" weight="0.13860206" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.41889763" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.18346457" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32992125" />
@@ -412,8 +412,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="662">
-          <caret line="29" selection-start-line="29" selection-end-line="29" />
+        <state relative-caret-position="551">
+          <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#860#861#0" expanded="true" />

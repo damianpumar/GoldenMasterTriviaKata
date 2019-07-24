@@ -12,9 +12,9 @@ public class GameRunner {
     public void run() {
         boolean notAWinner;
 
-        aGame.add("Chet");
-        aGame.add("Pat");
-        aGame.add("Sue");
+        aGame.addPlayer("Chet");
+        aGame.addPlayer("Pat");
+        aGame.addPlayer("Sue");
 
         do {
 
