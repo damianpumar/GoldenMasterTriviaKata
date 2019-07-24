@@ -27,9 +27,7 @@ public class GameRunnerShould {
 
             run(seed);
 
-            String lines = readFile(seed);
-
-            assertThat(outputStream.toString()).isEqualTo(lines);
+            assertThat(outputStream.toString()).isEqualTo(readFile(seed));
         }
     }
 
