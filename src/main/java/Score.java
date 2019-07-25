@@ -9,8 +9,6 @@ public class Score {
     private boolean wrongAnswer(Player currentPlayer) {
         System.out.println("Question was incorrectly answered");
 
-        System.out.println(currentPlayer.name() + " was sent to the penalty box");
-
         currentPlayer.moveToPenaltyBox();
 
         return false;
@@ -34,11 +32,6 @@ public class Score {
 
     private boolean decideIsWinner(Player currentPlayer) {
         currentPlayer.increasePurse();
-
-        System.out.println(currentPlayer.name()
-                + " now has "
-                + currentPlayer.purse()
-                + " Gold Coins.");
 
         return currentPlayer.purse() == 6;
     }

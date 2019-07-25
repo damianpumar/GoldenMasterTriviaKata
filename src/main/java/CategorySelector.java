@@ -1,6 +1,7 @@
 import java.util.Arrays;
 
 public class CategorySelector {
+
     public String choiceCategory(int currentPlace) {
         String category = getCategory(currentPlace);
 

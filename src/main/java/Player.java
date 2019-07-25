@@ -76,6 +76,11 @@ public class Player {
 
     public void increasePurse() {
         purse++;
+
+        System.out.println(name
+                + " now has "
+                + purse
+                + " Gold Coins.");
     }
 
     public boolean isInPenaltyBox() {
@@ -83,6 +88,8 @@ public class Player {
     }
 
     public void moveToPenaltyBox() {
+        System.out.println(name + " was sent to the penalty box");
+
         inPenaltyBox = true;
     }
 
