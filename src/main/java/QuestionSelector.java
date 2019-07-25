@@ -1,25 +1,25 @@
 import java.util.LinkedList;
 
-public class Questions {
+public class QuestionSelector {
     private final LinkedList popQuestions = new LinkedList();
     private final LinkedList scienceQuestions = new LinkedList();
     private final LinkedList sportsQuestions = new LinkedList();
     private final LinkedList rockQuestions = new LinkedList();
 
-    public Questions() {
+    public QuestionSelector() {
         for (int questionNumber = 0; questionNumber < 50; questionNumber++) {
             addQuestions(questionNumber);
         }
     }
 
-    public void askQuestion(String currentCategory) {
-        if (currentCategory == "Pop")
+    public void askQuestion(String chosenCategory) {
+        if (chosenCategory == "Pop")
             System.out.println(popQuestions.removeFirst());
-        if (currentCategory == "Science")
+        if (chosenCategory == "Science")
             System.out.println(scienceQuestions.removeFirst());
-        if (currentCategory == "Sports")
+        if (chosenCategory == "Sports")
             System.out.println(sportsQuestions.removeFirst());
-        if (currentCategory == "Rock")
+        if (chosenCategory == "Rock")
             System.out.println(rockQuestions.removeFirst());
     }
 

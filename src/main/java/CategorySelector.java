@@ -1,15 +1,15 @@
 import java.util.Arrays;
 
-public class Category {
-    public String printAndReturnCategory(int currentPlace) {
-        String category = currentCategory(currentPlace);
+public class CategorySelector {
+    public String choiceCategory(int currentPlace) {
+        String category = getCategory(currentPlace);
 
         System.out.println("The category is " + category);
 
         return category;
     }
 
-    private String currentCategory(int currentPlace) {
+    private String getCategory(int currentPlace) {
         if (isCurrentPlace(currentPlace,0, 4, 8)) return "Pop";
 
         if (isCurrentPlace(currentPlace, 1, 5, 9)) return "Science";

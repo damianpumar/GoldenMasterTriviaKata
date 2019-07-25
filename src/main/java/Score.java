@@ -1,6 +1,6 @@
 public class Score {
     private final Players players;
-    
+
     public Score(Players players) {
         this.players = players;
     }
@@ -33,7 +33,7 @@ public class Score {
     private boolean wrongAnswer() {
         System.out.println("Question was incorrectly answered");
 
-        System.out.println(this.players.getCurrentPlayer() + " was sent to the penalty box");
+        System.out.println(this.players.currentPlayerName() + " was sent to the penalty box");
 
         players.moveToPenaltyBox();
 
@@ -45,7 +45,7 @@ public class Score {
     private boolean decideIsWinner() {
         players.increasePurse();
 
-        System.out.println(players.getCurrentPlayer()
+        System.out.println(players.currentPlayerName()
                 + " now has "
                 + players.currentPurse()
                 + " Gold Coins.");
