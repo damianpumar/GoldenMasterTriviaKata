@@ -2,9 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2b23b926-765a-4ea9-98e0-7e9b6fef89f1" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/CategorySelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CategorySelector.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Rule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.10.3/taskHistory/taskHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/GameRunner.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/GameRunner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/test/GameRunnerShould.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/test/GameRunnerShould.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/classes/GameRunnerShould.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/classes/GameRunnerShould.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/TEST-GameRunnerShould.xml" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/TEST-GameRunnerShould.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GameRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Player.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Score.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Score.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GameRunnerShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameRunnerShould.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -41,12 +64,30 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/GameRunnerShould.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+              <folding>
+                <element signature="method#generate_golden_master#0;class#GameRunnerShould#0" />
+                <element signature="method#golden_master#0;class#GameRunnerShould#0" />
+                <element signature="method#createFile#0;class#GameRunnerShould#0" />
+                <element signature="method#createByteArrayOut#0;class#GameRunnerShould#0" />
+                <element signature="e#1715#1716#0" expanded="true" />
+                <element signature="e#1748#1749#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/GameRunner.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="690">
-              <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+            <state relative-caret-position="120">
+              <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
               <folding>
-                <element signature="method#main#0;class#GameRunner#0" />
+                <element signature="e#90#91#0" expanded="true" />
+                <element signature="e#122#123#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -55,32 +96,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+            <state relative-caret-position="150">
+              <caret line="5" column="21" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="21" />
               <folding>
-                <element signature="e#113#114#0" expanded="true" />
-                <element signature="e#163#164#0" expanded="true" />
-                <element signature="e#205#206#0" expanded="true" />
-                <element signature="e#242#243#0" expanded="true" />
-                <element signature="e#268#269#0" expanded="true" />
-                <element signature="e#296#297#0" expanded="true" />
-                <element signature="e#342#343#0" expanded="true" />
-                <element signature="e#394#395#0" expanded="true" />
+                <element signature="e#100#101#0" expanded="true" />
+                <element signature="e#132#133#0" expanded="true" />
+                <element signature="e#155#156#0" expanded="true" />
+                <element signature="e#199#200#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Board.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Score.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#835#836#0" expanded="true" />
-                <element signature="e#866#867#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="895">
+              <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
             </state>
           </provider>
         </entry>
@@ -115,7 +147,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/src/test/java/GameRunnerShould.java" />
         <option value="$PROJECT_DIR$/src/main/java/Location.java" />
         <option value="$PROJECT_DIR$/src/main/java/Answer.java" />
         <option value="$PROJECT_DIR$/src/main/java/Category.java" />
@@ -123,13 +154,15 @@
         <option value="$PROJECT_DIR$/src/main/java/Questions.java" />
         <option value="$PROJECT_DIR$/src/main/java/QuestionSelector.java" />
         <option value="$PROJECT_DIR$/src/main/java/AnswerVerifier.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Game.java" />
-        <option value="$PROJECT_DIR$/src/main/java/GameRunner.java" />
         <option value="$PROJECT_DIR$/src/main/java/Players.java" />
         <option value="$PROJECT_DIR$/src/main/java/CategorySelector.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Board.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GameRunner.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Rule.java" />
+        <option value="$PROJECT_DIR$/src/test/java/GameRunnerShould.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/Score.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Board.java" />
       </list>
     </option>
   </component>
@@ -290,18 +323,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.25 at 10h 14m 12s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.25 at 10h 14m 22s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.25 at 10h 16m 23s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
-    <history-entry file="GameRunnerShould_golden_master - 2019.07.25 at 10h 40m 36s.xml">
-      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="GameRunnerShould_golden_master - 2019.07.25 at 10h 40m 57s.xml">
       <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -320,9 +341,21 @@
     <history-entry file="GameRunnerShould_golden_master - 2019.07.25 at 10h 55m 27s.xml">
       <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
     </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.25 at 11h 36m 41s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.25 at 11h 36m 49s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.25 at 11h 44m 16s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
+    <history-entry file="GameRunnerShould_golden_master - 2019.07.25 at 11h 45m 01s.xml">
+      <configuration name="GameRunnerShould.golden_master" configurationId="GradleRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22454000" />
+    <option name="totallyTimeSpent" value="24071000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -337,13 +370,13 @@
     <frame x="1440" y="-239" width="2560" height="1364" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4984252" visible="true" weight="0.13860206" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4984252" visible="true" weight="0.13860206" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Favorites" order="3" sideWeight="0.5015748" side_tool="true" weight="0.13860206" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3278302" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.14308175" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.14308175" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.6100629" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -437,20 +470,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/GameRunnerShould.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="method#generate_golden_master#0;class#GameRunnerShould#0" />
-            <element signature="method#golden_master#0;class#GameRunnerShould#0" />
-            <element signature="method#run#0;class#GameRunnerShould#0" />
-            <element signature="method#createFile#0;class#GameRunnerShould#0" />
-            <element signature="method#createByteArrayOut#0;class#GameRunnerShould#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk-12.0.1.jdk/Contents/Home/lib/src.zip!/java.base/java/util/LinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
@@ -469,23 +488,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Location.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Players.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Location.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/Players.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/CategorySelector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="570">
@@ -500,60 +504,87 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="79" column="31" selection-start-line="79" selection-start-column="31" selection-end-line="79" selection-end-column="31" />
+        <state relative-caret-position="480">
+          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
           <folding>
-            <element signature="e#1689#1690#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#866#867#0" expanded="true" />
+            <element signature="e#1202#1203#0" expanded="true" />
+            <element signature="e#1251#1252#0" expanded="true" />
+            <element signature="e#1287#1288#0" expanded="true" />
+            <element signature="e#1324#1325#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Score.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Rule.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="654">
-          <caret line="27" column="9" lean-forward="true" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+        <state relative-caret-position="300">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="e#208#209#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/GameRunnerShould.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="34" column="36" selection-start-line="34" selection-start-column="36" selection-end-line="34" selection-end-column="36" />
+          <folding>
+            <element signature="method#generate_golden_master#0;class#GameRunnerShould#0" />
+            <element signature="method#golden_master#0;class#GameRunnerShould#0" />
+            <element signature="method#createFile#0;class#GameRunnerShould#0" />
+            <element signature="method#createByteArrayOut#0;class#GameRunnerShould#0" />
+            <element signature="e#1715#1716#0" expanded="true" />
+            <element signature="e#1748#1749#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GameRunner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="23" column="45" selection-start-line="23" selection-start-column="45" selection-end-line="23" selection-end-column="45" />
+        <state relative-caret-position="120">
+          <caret line="4" column="23" lean-forward="true" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
           <folding>
-            <element signature="method#main#0;class#GameRunner#0" />
+            <element signature="e#90#91#0" expanded="true" />
+            <element signature="e#122#123#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="955">
+          <caret line="89" column="20" selection-start-line="89" selection-start-column="20" selection-end-line="89" selection-end-column="20" />
+          <folding>
+            <element signature="e#1972#1973#0" expanded="true" />
+            <element signature="e#2007#2008#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="18" column="30" selection-start-line="18" selection-start-column="30" selection-end-line="18" selection-end-column="30" />
+        <state relative-caret-position="150">
+          <caret line="5" column="21" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="21" />
           <folding>
-            <element signature="e#113#114#0" expanded="true" />
-            <element signature="e#163#164#0" expanded="true" />
-            <element signature="e#205#206#0" expanded="true" />
-            <element signature="e#242#243#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-            <element signature="e#296#297#0" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#394#395#0" expanded="true" />
+            <element signature="e#100#101#0" expanded="true" />
+            <element signature="e#132#133#0" expanded="true" />
+            <element signature="e#155#156#0" expanded="true" />
+            <element signature="e#199#200#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Board.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Score.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="39" column="39" lean-forward="true" selection-start-line="39" selection-start-column="39" selection-end-line="39" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#835#836#0" expanded="true" />
-            <element signature="e#866#867#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="895">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="34" />
         </state>
       </provider>
     </entry>

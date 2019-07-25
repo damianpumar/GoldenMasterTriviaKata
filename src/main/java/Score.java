@@ -33,6 +33,7 @@ public class Score {
     private boolean decideIsWinner(Player currentPlayer) {
         currentPlayer.increasePurse();
 
-        return currentPlayer.purse() == 6;
+        return currentPlayer.isWinner();
     }
+
 }

@@ -1,10 +1,13 @@
-import java.util.Random;
 
 public class Game {
     private final Board board;
+    
+    public Game() {
+        this(new Rule());
+    }
 
-    public Game(Random randomRoll) {
-        this.board = new Board(randomRoll);
+    Game(Rule rule) {
+        this.board = new Board(rule);
     }
 
     public void addPlayer(String name) {

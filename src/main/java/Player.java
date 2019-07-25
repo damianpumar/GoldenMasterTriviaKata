@@ -1,9 +1,7 @@
 import java.util.Random;
 
 public class Player {
-    private final CategorySelector categorySelector;
-    private final QuestionSelector questionSelector;
-    private final Random randomRoll;
+    private final Rule rule;
 
     private final String name;
     private int place = 0;
@@ -11,18 +9,15 @@ public class Player {
     private boolean inPenaltyBox = false;
     private boolean isGettingOutOfPenaltyBox;
 
-    public Player(String name, Random randomRoll, CategorySelector categorySelector, QuestionSelector questionSelector) {
+    public Player(String name, Rule rule) {
         this.name = name;
-
-        this.randomRoll = randomRoll;
-        this.categorySelector = categorySelector;
-        this.questionSelector = questionSelector;
+        this.rule = rule;
 
         System.out.println(name + " was added");
     }
 
     public void roll() {
-        int roll = randomRoll.nextInt(5) + 1;
+        int roll = rule.nextRoll();
 
         System.out.println(name + " is the current player");
 
@@ -57,21 +52,11 @@ public class Player {
                 + "'s new location is "
                 + place);
 
-        String chosenCategory = categorySelector.choiceCategory(place);
-
-        questionSelector.askQuestion(chosenCategory);
+        rule.askQuestion(place);
     }
 
     public int answer() {
-        return randomRoll.nextInt(9);
-    }
-
-    public String name() {
-        return name;
-    }
-
-    public int purse() {
-        return purse;
+        return rule.nextAnswer();
     }
 
     public void increasePurse() {
@@ -99,5 +84,9 @@ public class Player {
 
     private boolean isOdd(int roll) {
         return roll % 2 != 0;
+    }
+
+    public boolean isWinner() {
+        return purse == 6;
     }
 }

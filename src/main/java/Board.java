@@ -3,25 +3,19 @@ import java.util.Random;
 
 public class Board {
     private final ArrayList<Player> players;
+    private Rule rule;
     private final Score score;
-
-    private final Random randomRoll;
-    private final CategorySelector categorySelector;
-    private final QuestionSelector questionSelector;
 
     private int currentPlayer = 0;
 
-    public Board(Random randomRoll) {
+    public Board(Rule rule) {
         this.players = new ArrayList();
+        this.rule = rule;
         this.score = new Score();
-
-        this.randomRoll = randomRoll;
-        this.categorySelector = new CategorySelector();
-        this.questionSelector = new QuestionSelector();
     }
 
     public void addPlayer(String name) {
-        players.add(new Player(name, randomRoll, categorySelector, questionSelector));
+        players.add(new Player(name, rule));
 
         System.out.println("They are player number " + howManyPlayers());
     }
