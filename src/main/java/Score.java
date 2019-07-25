@@ -15,13 +15,7 @@ public class Score {
     }
 
     private boolean correctAnswer(Player currentPlayer) {
-        if (!currentPlayer.isInPenaltyBox()) {
-            System.out.println("Answer was correct!!!!");
-
-            return decideIsWinner(currentPlayer);
-        }
-
-        if (currentPlayer.isGettingOutOfPenaltyBox()) {
+        if (!currentPlayer.isInPenaltyBox() || currentPlayer.isGettingOutOfPenaltyBox()) {
             System.out.println("Answer was correct!!!!");
 
             return decideIsWinner(currentPlayer);
