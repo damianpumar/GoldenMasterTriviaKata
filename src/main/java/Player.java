@@ -1,38 +1,50 @@
+import java.util.Random;
+
 public class Player {
     private final CategorySelector categorySelector;
     private final QuestionSelector questionSelector;
+    private final Random randomRoll;
 
     private final String name;
-
     private int place = 0;
     private int purse = 0;
     private boolean inPenaltyBox = false;
+    private boolean isGettingOutOfPenaltyBox;
 
-    public Player(String name, CategorySelector categorySelector, QuestionSelector questionSelector) {
+    public Player(String name, Random randomRoll, CategorySelector categorySelector, QuestionSelector questionSelector) {
+        this.name = name;
+
+        this.randomRoll = randomRoll;
         this.categorySelector = categorySelector;
         this.questionSelector = questionSelector;
-
-        this.name = name;
 
         System.out.println(name + " was added");
     }
 
-    public boolean roll(int roll) {
+    public void roll() {
+        int roll = randomRoll.nextInt(5) + 1;
+
         System.out.println(name + " is the current player");
 
         System.out.println("They have rolled a " + roll);
 
-        if(!inPenaltyBox) {
+        if (!inPenaltyBox) {
             move(roll);
 
-            return false;
+            return;
         }
 
         if (isOdd(roll)) {
-            return gettingOutPenaltyBox(roll);
-        }
+            System.out.println(name + " is getting out of the penalty box");
 
-        return stillInPenaltyBox();
+            move(roll);
+
+            isGettingOutOfPenaltyBox = true;
+        } else {
+            System.out.println(name + " is not getting out of the penalty box");
+
+            isGettingOutOfPenaltyBox = false;
+        }
     }
 
     public void move(int roll) {
@@ -50,38 +62,32 @@ public class Player {
         questionSelector.askQuestion(chosenCategory);
     }
 
+    public int answer() {
+        return randomRoll.nextInt(9);
+    }
+
     public String name() {
         return name;
+    }
+
+    public int purse() {
+        return purse;
     }
 
     public void increasePurse() {
         purse++;
     }
 
-    public int currentPurse() {
-        return purse;
+    public boolean isInPenaltyBox() {
+        return inPenaltyBox;
     }
 
     public void moveToPenaltyBox() {
         inPenaltyBox = true;
     }
 
-    public boolean isInPenaltyBox() {
-        return inPenaltyBox;
-    }
-
-    private boolean stillInPenaltyBox() {
-        System.out.println(name + " is not getting out of the penalty box");
-
-        return false;
-    }
-
-    private boolean gettingOutPenaltyBox(int roll) {
-        System.out.println(name + " is getting out of the penalty box");
-
-        move(roll);
-
-        return true;
+    public boolean isGettingOutOfPenaltyBox() {
+        return isGettingOutOfPenaltyBox;
     }
 
     private boolean isOdd(int roll) {

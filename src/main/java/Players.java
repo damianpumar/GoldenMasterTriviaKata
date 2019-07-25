@@ -1,28 +1,31 @@
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Players {
+    private final ArrayList<Player> players;
+
+    private final Random randomRoll;
     private final CategorySelector categorySelector;
     private final QuestionSelector questionSelector;
 
-    private final ArrayList<Player> players;
-
     private int currentPlayer = 0;
 
-    public Players(int[] places, int[] purses, boolean[] inPenaltyBox) {
+    public Players(Random randomRoll) {
         this.players = new ArrayList();
 
+        this.randomRoll = randomRoll;
         this.categorySelector = new CategorySelector();
         this.questionSelector = new QuestionSelector();
     }
 
     public void addPlayer(String name) {
-        players.add(new Player(name, categorySelector, questionSelector));
+        players.add(new Player(name, randomRoll, categorySelector, questionSelector));
 
         System.out.println("They are player number " + howManyPlayers());
     }
 
-    public boolean roll(int roll) {
-        return getCurrentPlayer().roll(roll);
+    public void roll() {
+        player().roll();
     }
 
     public void changePlayer() {
@@ -32,35 +35,11 @@ public class Players {
             currentPlayer = 0;
     }
 
-    public void increasePurse() {
-        getCurrentPlayer().increasePurse();
-    }
-
-    public int currentPurse() {
-        return getCurrentPlayer().currentPurse();
-    }
-
-    public void moveToPenaltyBox() {
-        getCurrentPlayer().moveToPenaltyBox();
-    }
-
-    public boolean isInPenaltyBox() {
-        return getCurrentPlayer().isInPenaltyBox();
-    }
-
-    private Player getCurrentPlayer() {
+    public Player player() {
         return players.get(currentPlayer);
     }
 
-
-
-
-
     private int howManyPlayers() {
         return players.size();
-    }
-
-    public String currentPlayerName() {
-        return getCurrentPlayer().name();
     }
 }

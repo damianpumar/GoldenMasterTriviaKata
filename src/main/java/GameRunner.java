@@ -2,16 +2,16 @@ import java.util.Random;
 
 public class GameRunner {
     private final Game game;
-    private final Random rand;
+    private final Random randomRoll;
 
-    public GameRunner(Random rand) {
-        this.rand = rand;
+    public GameRunner(Random randomRoll) {
+        this.randomRoll = randomRoll;
 
-        this.game = new Game();
+        this.game = new Game(this.randomRoll);
     }
 
     public void run() {
-        boolean notAWinner;
+        boolean aWinner;
 
         game.addPlayer("Chet");
         game.addPlayer("Pat");
@@ -19,11 +19,11 @@ public class GameRunner {
 
         do {
 
-            game.roll(rand.nextInt(5) + 1);
+            game.roll();
 
-            notAWinner = game.decideAnswer(rand.nextInt(9));
+            aWinner = game.isWinnerCurrentPlayer();
 
-        } while (notAWinner);
+        } while (!aWinner);
     }
 
     public static void main(String[] args) {
