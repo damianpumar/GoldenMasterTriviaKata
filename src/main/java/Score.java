@@ -16,7 +16,7 @@ public class Score {
 
     private boolean correctAnswer(Player currentPlayer) {
         if (!currentPlayer.isInPenaltyBox()) {
-            System.out.println("Answer was corrent!!!!");
+            System.out.println("Answer was correct!!!!");
 
             return decideIsWinner(currentPlayer);
         }
