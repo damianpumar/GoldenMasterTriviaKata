@@ -1,17 +1,13 @@
-import java.util.Random;
 
 public class GameRunner {
     private final Game game;
-    private final Random rand;
 
-    public GameRunner(Random rand) {
-        this.rand = rand;
-
-        this.game = new Game();
+    public GameRunner(Game game) {
+        this.game = game;
     }
 
     public void run() {
-        boolean notAWinner;
+        boolean aWinner;
 
         game.addPlayer("Chet");
         game.addPlayer("Pat");
@@ -19,16 +15,14 @@ public class GameRunner {
 
         do {
 
-            game.roll(rand.nextInt(5) + 1);
+            game.roll();
 
-            notAWinner = game.decideAnswer(rand.nextInt(9));
+            aWinner = game.isWinnerCurrentPlayer();
 
-        } while (notAWinner);
+        } while (!aWinner);
     }
 
     public static void main(String[] args) {
-        Random rand = new Random();
-
-        new GameRunner(rand).run();
+        new GameRunner(new Game()).run();
     }
 }

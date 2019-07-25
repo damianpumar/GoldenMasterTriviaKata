@@ -32,7 +32,7 @@ public class GameRunnerShould {
     }
 
     private void run(int seed) {
-        GameRunner runner = new GameRunner(new Random(seed));
+        GameRunner runner = new GameRunner(createGame(seed));
 
         runner.run();
     }
@@ -53,5 +53,9 @@ public class GameRunnerShould {
         System.setOut(print);
 
         return byteArrayOutputStream;
+    }
+
+    private Game createGame(int seed) {
+        return new Game(new Rule(new Random(seed)));
     }
 }

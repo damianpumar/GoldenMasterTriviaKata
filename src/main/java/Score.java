@@ -1,63 +1,33 @@
 public class Score {
-    private final Players players;
-    
-    public Score(Players players) {
-        this.players = players;
+    public boolean isWinner(Player currentPlayer) {
+        if (currentPlayer.answer() == 7)
+            return wrongAnswer(currentPlayer);
+
+        return correctAnswer(currentPlayer);
     }
 
-    public boolean answer(int nextValue, boolean isGettingOutOfPenaltyBox) {
-        if (nextValue == 7)
-            return wrongAnswer();
-
-        return wasCorrectlyAnswered(isGettingOutOfPenaltyBox);
-    }
-
-    private boolean wasCorrectlyAnswered(boolean isGettingOutOfPenaltyBox) {
-        if (!players.isInPenaltyBox()) {
-            System.out.println("Answer was corrent!!!!");
-
-            return decideIsWinner();
-        }
-
-        if (isGettingOutOfPenaltyBox) {
-            System.out.println("Answer was correct!!!!");
-
-            return decideIsWinner();
-        }
-
-        players.changePlayer();
-
-        return true;
-    }
-
-    private boolean wrongAnswer() {
+    private boolean wrongAnswer(Player currentPlayer) {
         System.out.println("Question was incorrectly answered");
 
-        System.out.println(this.players.getCurrentPlayer() + " was sent to the penalty box");
+        currentPlayer.moveToPenaltyBox();
 
-        players.moveToPenaltyBox();
-
-        players.changePlayer();
-
-        return true;
+        return false;
     }
 
-    private boolean decideIsWinner() {
-        players.increasePurse();
+    private boolean correctAnswer(Player currentPlayer) {
+        if (!currentPlayer.isInPenaltyBox() || currentPlayer.isGettingOutOfPenaltyBox()) {
+            System.out.println("Answer was correct!!!!");
 
-        System.out.println(players.getCurrentPlayer()
-                + " now has "
-                + players.currentPurse()
-                + " Gold Coins.");
+            return decideIsWinner(currentPlayer);
+        }
 
-        boolean winner = didPlayerWin();
-
-        players.changePlayer();
-
-        return winner;
+        return false;
     }
 
-    private boolean didPlayerWin() {
-        return players.currentPurse() != 6;
+    private boolean decideIsWinner(Player currentPlayer) {
+        currentPlayer.increasePurse();
+
+        return currentPlayer.isWinner();
     }
+
 }
