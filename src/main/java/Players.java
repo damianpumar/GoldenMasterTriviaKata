@@ -22,21 +22,7 @@ public class Players {
     }
 
     public boolean roll(int roll) {
-        System.out.println(getCurrentPlayer().name() + " is the current player");
-
-        System.out.println("They have rolled a " + roll);
-
-        if (!isInPenaltyBox()) {
-            move(roll);
-
-            return false;
-        }
-
-        if (isOdd(roll)) {
-            return gettingOutPenaltyBox(roll);
-        }
-
-        return stillInPenaltyBox();
+        return getCurrentPlayer().roll(roll);
     }
 
     public void changePlayer() {
@@ -44,12 +30,6 @@ public class Players {
 
         if (currentPlayer == howManyPlayers())
             currentPlayer = 0;
-    }
-
-    public void move(int roll) {
-        Player player = getCurrentPlayer();
-
-        player.move(roll);
     }
 
     public void increasePurse() {
@@ -72,23 +52,9 @@ public class Players {
         return players.get(currentPlayer);
     }
 
-    private boolean stillInPenaltyBox() {
-        System.out.println(getCurrentPlayer().name() + " is not getting out of the penalty box");
 
-        return false;
-    }
 
-    private boolean gettingOutPenaltyBox(int roll) {
-        System.out.println(getCurrentPlayer().name() + " is getting out of the penalty box");
 
-        move(roll);
-
-        return true;
-    }
-
-    private boolean isOdd(int roll) {
-        return roll % 2 != 0;
-    }
 
     private int howManyPlayers() {
         return players.size();

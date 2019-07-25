@@ -5,7 +5,7 @@ public class Player {
     private final String name;
 
     private int place = 0;
-    private int purse = 0 ;
+    private int purse = 0;
     private boolean inPenaltyBox = false;
 
     public Player(String name, CategorySelector categorySelector, QuestionSelector questionSelector) {
@@ -17,8 +17,26 @@ public class Player {
         System.out.println(name + " was added");
     }
 
+    public boolean roll(int roll) {
+        System.out.println(name + " is the current player");
+
+        System.out.println("They have rolled a " + roll);
+
+        if(!inPenaltyBox) {
+            move(roll);
+
+            return false;
+        }
+
+        if (isOdd(roll)) {
+            return gettingOutPenaltyBox(roll);
+        }
+
+        return stillInPenaltyBox();
+    }
+
     public void move(int roll) {
-        place  += roll;
+        place += roll;
 
         if (place > 11)
             place -= 12;
@@ -30,10 +48,6 @@ public class Player {
         String chosenCategory = categorySelector.choiceCategory(place);
 
         questionSelector.askQuestion(chosenCategory);
-    }
-
-    public int place(){
-        return place;
     }
 
     public String name() {
@@ -54,5 +68,23 @@ public class Player {
 
     public boolean isInPenaltyBox() {
         return inPenaltyBox;
+    }
+
+    private boolean stillInPenaltyBox() {
+        System.out.println(name + " is not getting out of the penalty box");
+
+        return false;
+    }
+
+    private boolean gettingOutPenaltyBox(int roll) {
+        System.out.println(name + " is getting out of the penalty box");
+
+        move(roll);
+
+        return true;
+    }
+
+    private boolean isOdd(int roll) {
+        return roll % 2 != 0;
     }
 }
